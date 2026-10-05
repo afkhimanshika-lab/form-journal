@@ -1,0 +1,1039 @@
+/* =========================================
+   BASIC RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #e9e5dc;
+    color: #171716;
+
+    font-family: "DM Sans", sans-serif;
+    font-weight: 300;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.navigation {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 100;
+
+    padding-top: 25px;
+}
+
+
+.brand {
+    color: #171716;
+
+    text-decoration: none;
+
+    font-size: 1.25rem;
+    font-weight: 500;
+
+    letter-spacing: -0.04em;
+}
+
+.brand span {
+    font-family: "Playfair Display", serif;
+}
+
+
+.navbar-nav {
+    gap: 35px;
+}
+
+.nav-link {
+    color: #171716 !important;
+
+    font-size: 0.72rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.08em;
+
+    transition: opacity 0.3s ease;
+}
+
+.nav-link:hover {
+    opacity: 0.45;
+}
+
+
+.navbar-toggler {
+    border: none;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 0.08em;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    min-height: 100vh;
+
+    padding-top: 120px;
+    padding-bottom: 45px;
+
+    display: flex;
+    align-items: center;
+}
+
+
+.hero-meta {
+    display: flex;
+
+    justify-content: space-between;
+
+    border-bottom: 1px solid #171716;
+
+    padding-bottom: 12px;
+
+    font-size: 0.68rem;
+
+    letter-spacing: 0.08em;
+}
+
+
+.hero-heading {
+    padding-top: 55px;
+}
+
+
+.hero-heading h1 {
+    margin: 0;
+
+    font-size: clamp(5rem, 13vw, 13rem);
+
+    line-height: 0.78;
+
+    font-weight: 300;
+
+    letter-spacing: -0.075em;
+}
+
+
+.hero-heading i,
+h2 i,
+h3 i {
+    font-family: "Playfair Display", serif;
+
+    font-weight: 400;
+}
+
+
+.hero-footer {
+    margin-top: 80px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+}
+
+
+.hero-footer p {
+    max-width: 360px;
+
+    font-size: 0.9rem;
+
+    line-height: 1.5;
+}
+
+
+.hero-footer a {
+    color: #171716;
+
+    text-decoration: none;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 0.1em;
+}
+
+.hero-footer strong {
+    font-size: 1rem;
+
+    margin-left: 8px;
+}
+
+
+
+/* =========================================
+   COMMON LABEL
+========================================= */
+
+.label {
+    font-size: 0.65rem;
+
+    letter-spacing: 0.1em;
+
+    text-transform: uppercase;
+
+    margin: 0;
+}
+
+
+
+/* =========================================
+   JOURNAL INTRO
+========================================= */
+
+.journal-intro {
+    padding: 160px 0;
+}
+
+
+.journal-intro h2 {
+    max-width: 900px;
+
+    font-size: clamp(2.5rem, 5vw, 5.5rem);
+
+    line-height: 0.98;
+
+    font-weight: 300;
+
+    letter-spacing: -0.05em;
+
+    margin: 0;
+}
+
+
+
+/* =========================================
+   IMAGE COMMON STYLING
+========================================= */
+
+.main-image,
+.side-image,
+.small-image {
+
+    position: relative;
+
+    overflow: hidden;
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+}
+
+
+/* Image overlay */
+
+.main-image::after,
+.side-image::after,
+.small-image::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.08);
+
+    pointer-events: none;
+
+}
+
+
+/* =========================================
+   REAL IMAGES
+========================================= */
+
+
+/* Featured */
+
+.image-one {
+
+    height: 720px;
+
+    background-image: url(
+        "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1800&q=85"
+    );
+
+}
+
+
+/* Story 2 */
+
+.image-two {
+
+    height: 700px;
+
+    background-image: url(
+        "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1800&q=85"
+    );
+
+}
+
+
+/* Story 3 */
+
+.image-three {
+
+    height: 650px;
+
+    background-image: url(
+        "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1800&q=85"
+    );
+
+}
+
+
+/* Small images */
+
+.small-one {
+
+    background-image: url(
+        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85"
+    );
+
+}
+
+
+.small-two {
+
+    background-image: url(
+        "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=85"
+    );
+
+}
+
+
+.small-three {
+
+    background-image: url(
+        "https://images.unsplash.com/photo-1600573472550-8090b5e0745e?auto=format&fit=crop&w=1200&q=85"
+    );
+
+}
+
+
+
+/* =========================================
+   IMAGE NUMBERS
+========================================= */
+
+.image-number {
+
+    position: absolute;
+
+    top: 20px;
+    left: 20px;
+
+    color: white;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 0.08em;
+
+    z-index: 5;
+
+}
+
+
+.image-caption {
+
+    position: absolute;
+
+    bottom: 20px;
+    left: 20px;
+
+    color: white;
+
+    font-size: 0.65rem;
+
+    letter-spacing: 0.1em;
+
+    z-index: 5;
+
+}
+
+
+.small-image span {
+
+    position: absolute;
+
+    top: 15px;
+    left: 15px;
+
+    color: white;
+
+    font-size: 0.7rem;
+
+    z-index: 5;
+
+}
+
+
+
+/* =========================================
+   FEATURE STORY
+========================================= */
+
+.feature {
+
+    padding-bottom: 200px;
+}
+
+
+.story-content {
+
+    padding: 50px;
+
+}
+
+
+.category {
+
+    font-size: 0.62rem;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+
+    margin-bottom: 30px;
+}
+
+
+.story-content h2 {
+
+    font-size: clamp(2.5rem, 4vw, 5rem);
+
+    line-height: 0.95;
+
+    font-weight: 300;
+
+    letter-spacing: -0.05em;
+
+    margin-bottom: 35px;
+
+}
+
+
+.description {
+
+    max-width: 380px;
+
+    font-size: 0.9rem;
+
+    line-height: 1.6;
+
+    margin-bottom: 35px;
+
+}
+
+
+.details {
+
+    display: flex;
+
+    gap: 30px;
+
+    font-size: 0.62rem;
+
+    letter-spacing: 0.08em;
+
+    margin-bottom: 30px;
+
+}
+
+
+.story-link {
+
+    color: #171716;
+
+    text-decoration: none;
+
+    font-size: 0.68rem;
+
+    letter-spacing: 0.08em;
+
+    border-bottom: 1px solid #171716;
+
+    padding-bottom: 5px;
+
+}
+
+
+
+/* =========================================
+   STORY SECTIONS
+========================================= */
+
+.story-section {
+
+    padding-bottom: 220px;
+}
+
+
+.story-two-text {
+
+    padding-top: 150px;
+
+}
+
+
+.story-three {
+
+    padding-bottom: 250px;
+}
+
+
+
+/* =========================================
+   STATEMENT
+========================================= */
+
+.statement {
+
+    padding: 180px 0;
+
+    border-top: 1px solid #171716;
+
+    border-bottom: 1px solid #171716;
+}
+
+
+.statement h2 {
+
+    margin-top: 70px;
+
+    font-size: clamp(4rem, 9vw, 10rem);
+
+    line-height: 0.85;
+
+    letter-spacing: -0.07em;
+
+    font-weight: 300;
+
+}
+
+
+
+/* =========================================
+   MORE STORIES
+========================================= */
+
+.more-stories {
+
+    padding: 180px 0;
+}
+
+
+.section-title {
+
+    font-size: clamp(3rem, 6vw, 6rem);
+
+    font-weight: 300;
+
+    line-height: 0.9;
+
+    letter-spacing: -0.06em;
+
+    margin: 0;
+}
+
+
+.small-image {
+
+    height: 430px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.small-story h3 {
+
+    font-size: 2rem;
+
+    line-height: 1;
+
+    font-weight: 300;
+
+    letter-spacing: -0.04em;
+
+    margin-bottom: 15px;
+
+}
+
+
+.small-story > p:last-child {
+
+    font-size: 0.85rem;
+
+    line-height: 1.5;
+
+    max-width: 320px;
+
+}
+
+
+
+/* =========================================
+   ABOUT
+========================================= */
+
+.about {
+
+    padding: 180px 0;
+
+    border-top: 1px solid #171716;
+}
+
+
+.about h2 {
+
+    max-width: 1000px;
+
+    font-size: clamp(3rem, 6vw, 7rem);
+
+    line-height: 0.9;
+
+    font-weight: 300;
+
+    letter-spacing: -0.06em;
+
+}
+
+
+.about-text {
+
+    max-width: 450px;
+
+    margin-top: 70px;
+
+    font-size: 1rem;
+
+    line-height: 1.6;
+
+}
+
+
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.contact {
+
+    padding: 180px 0;
+
+    background: #171716;
+
+    color: #e9e5dc;
+}
+
+
+.contact h2 {
+
+    margin-top: 70px;
+
+    font-size: clamp(4rem, 10vw, 11rem);
+
+    line-height: 0.8;
+
+    font-weight: 300;
+
+    letter-spacing: -0.07em;
+
+}
+
+
+.contact a {
+
+    display: inline-block;
+
+    margin-top: 80px;
+
+    color: #e9e5dc;
+
+    text-decoration: none;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 0.1em;
+
+    border-bottom: 1px solid #e9e5dc;
+
+    padding-bottom: 7px;
+
+}
+
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+
+    background: #171716;
+
+    color: #e9e5dc;
+
+    padding-bottom: 30px;
+
+}
+
+
+.footer-main {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+
+    padding-bottom: 50px;
+
+}
+
+
+.footer-main h2 {
+
+    font-size: 5rem;
+
+    font-weight: 300;
+
+    letter-spacing: -0.08em;
+
+    margin: 0;
+
+}
+
+
+.footer-main h2 span {
+
+    font-family: "Playfair Display", serif;
+
+}
+
+
+.footer-main a {
+
+    color: #e9e5dc;
+
+    text-decoration: none;
+
+    font-size: 0.65rem;
+
+    letter-spacing: 0.08em;
+
+}
+
+
+.footer-line {
+
+    height: 1px;
+
+    background: #555;
+
+}
+
+
+.footer-bottom {
+
+    padding-top: 25px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 0.58rem;
+
+    letter-spacing: 0.08em;
+
+}
+
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991px) {
+
+    .hero-heading h1 {
+        font-size: clamp(4rem, 13vw, 8rem);
+    }
+
+
+    .journal-intro {
+        padding: 110px 0;
+    }
+
+
+    .feature {
+        padding-bottom: 120px;
+    }
+
+
+    .story-content {
+        padding: 40px 0;
+    }
+
+
+    .story-two-text {
+        padding-top: 70px;
+    }
+
+
+    .story-section {
+        padding-bottom: 130px;
+    }
+
+
+    .image-one {
+        height: 600px;
+    }
+
+
+    .image-two {
+        height: 600px;
+    }
+
+
+    .image-three {
+        height: 550px;
+    }
+
+
+    .statement {
+        padding: 130px 0;
+    }
+
+
+    .about {
+        padding: 130px 0;
+    }
+
+
+    .contact {
+        padding: 130px 0;
+    }
+
+}
+
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 576px) {
+
+    .navigation {
+        padding-top: 18px;
+    }
+
+
+    .navbar-nav {
+        gap: 10px;
+
+        padding-top: 20px;
+    }
+
+
+    .hero {
+        min-height: 100vh;
+
+        padding-top: 100px;
+    }
+
+
+    .hero-meta {
+        font-size: 0.55rem;
+    }
+
+
+    .hero-heading {
+        padding-top: 60px;
+    }
+
+
+    .hero-heading h1 {
+        font-size: clamp(4rem, 20vw, 7rem);
+
+        line-height: 0.82;
+    }
+
+
+    .hero-footer {
+        margin-top: 70px;
+
+        display: block;
+    }
+
+
+    .hero-footer a {
+        display: block;
+
+        margin-top: 30px;
+    }
+
+
+    .journal-intro {
+        padding: 100px 0;
+    }
+
+
+    .journal-intro h2 {
+        margin-top: 35px;
+
+        font-size: 2.8rem;
+    }
+
+
+    .image-one {
+        height: 500px;
+    }
+
+
+    .image-two {
+        height: 500px;
+    }
+
+
+    .image-three {
+        height: 450px;
+    }
+
+
+    .feature {
+        padding-bottom: 100px;
+    }
+
+
+    .story-content {
+        padding: 45px 0;
+    }
+
+
+    .story-content h2 {
+        font-size: 3rem;
+    }
+
+
+    .story-section {
+        padding-bottom: 100px;
+    }
+
+
+    .story-three {
+        padding-bottom: 120px;
+    }
+
+
+    .statement {
+        padding: 100px 0;
+    }
+
+
+    .statement h2 {
+        margin-top: 50px;
+
+        font-size: 4rem;
+    }
+
+
+    .more-stories {
+        padding: 100px 0;
+    }
+
+
+    .section-title {
+        margin-top: 35px;
+
+        font-size: 4rem;
+    }
+
+
+    .small-image {
+        height: 350px;
+    }
+
+
+    .about {
+        padding: 100px 0;
+    }
+
+
+    .about h2 {
+        margin-top: 35px;
+
+        font-size: 3.5rem;
+    }
+
+
+    .about-text {
+        margin-top: 50px;
+    }
+
+
+    .contact {
+        padding: 100px 0;
+    }
+
+
+    .contact h2 {
+        margin-top: 50px;
+
+        font-size: 4.5rem;
+    }
+
+
+    .footer-main {
+        display: block;
+
+        padding-bottom: 40px;
+    }
+
+
+    .footer-main h2 {
+        font-size: 4rem;
+
+        margin-bottom: 30px;
+    }
+
+
+    .footer-bottom {
+        display: block;
+
+        line-height: 2;
+    }
+
+}
